@@ -1,0 +1,14 @@
+{
+  "~": "SolaxX3/sensor/name",
+  "name": "name",
+  "state_topic": "~/state",
+  "unit_of_measurement": "",
+  "device": {
+    "identifiers": "MCXXXXXXXX5067",
+    "name": "SolaxX3",
+    "sw_version": "1.0",
+    "model": "X3-MIC/PRO",
+    "manufacturer": "Solax"
+  },
+  "force_update": false
+}

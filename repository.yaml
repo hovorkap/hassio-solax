@@ -1,3 +1,3 @@
-name: "Home Assistant Add-on: Solax X3 RS485 Power Scraper"
+name: "Home Assistant Add-on: Solax X3 RS485 to MQTT Power Scraper"
 url: https://github.com/hovorkap/hassio-solax
 maintainer: Petr Hovorka <petr@hovorkovi.eu>

@@ -6,18 +6,13 @@ ARG serial
 # Install requirements for add-on
 RUN apk add --no-cache \
     python3 py3-pip eudev git
-RUN pip3 install toml pymodbus==2.5.3 Twisted influxdb-client
+RUN pip3 install --quiet toml pymodbus==2.5.3 Twisted influxdb-client paho-mqtt pyyaml
 
 WORKDIR /solax
-RUN git clone https://github.com/hovorkap/PowerScraper.git .
-
-# Python 3 HTTP Server serves the current working dir
-# So let's set it to our add-on persistent data directory.
-# WORKDIR /data
+COPY src/ /solax/
 
 copy config-solax.toml config.toml
 
-# Copy data for add-on
 COPY run.sh /
 RUN chmod a+x /run.sh
 

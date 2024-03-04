@@ -1,6 +1,6 @@
 name: "Solax X3 RS485"
 description: "Solax PowerScraper wrapper"
-version: "1.0.33"
+version: "1.0.108"
 slug: "solax_power_scraper"
 init: false
 arch:
@@ -9,19 +9,24 @@ arch:
   - armhf
   - armv7
   - i386
-ports:
-  34800/tcp: 34800
 uart: true
 services:
   - "mqtt:need"
 options:
   serial: "/dev/ttyUSB0"
-  port: 34800
-  mqtt:
-    topic: "solax"
+  device:
+    identifiers: "MCXXXXXXXXXXXX"
+    name: SolaxX3
+    sw_version: "1.0"
+    model: X3-MIC/PRO
+    manufacturer: Solax
+  debug: false
 schema:
   serial: device(subsystem=tty)
-  port: port
-  mqtt:
-    topic: str
-webui: http://[HOST]:[PORT:34800]
+  device:
+    identifiers: str
+    name: str
+    sw_version: str
+    model: str
+    manufacturer: str
+  debug: bool
