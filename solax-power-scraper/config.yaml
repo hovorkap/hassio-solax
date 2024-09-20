@@ -1,6 +1,6 @@
 name: "Solax X3 RS485"
 description: "Solax PowerScraper wrapper"
-version: "1.0.111"
+version: "1.0.112"
 slug: "solax_power_scraper"
 init: false
 arch:
